@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+ <script type='text/javascript'>
+        function KeyPress(e) {
+            var evtobj = window.event? event : e
+
+
+            //test1 if ctrl+z is pressed
+
+            if (evtobj.keyCode == 90 && evtobj.ctrlKey) {
+       document.getElementById("okbtn").click();
+    }else if(evtobj.keyCode == 81 && evtobj.ctrlKey) {
+
+    //test1 if ctrl+q is pressed
+       document.getElementById("cancelbtn").click();
+    }
+   }
+        document.onkeydown = KeyPress;
+    </script>
+<body>
+<div tabindex="1" onFocus="document.querySelector('.autofocus2').focus()"></div>
+    <h1 tabindex="2" class="autofocus1" >Normal Accessibility Test</h1>
+    <a href="#" tabindex="3">Tutorials</a>
+    <a href="#" tabindex="4">References</a>
+    <a href="#" tabindex="5">Exercise</a>
+    <a href="#" tabindex="6">Videos</a>
+    <a href="#" tabindex="7">New</a>
+    <a href="#" tabindex="8">Menu</a>
+    <br>
+    <a href="#" tabindex="9">Log in</a>
+    <br>
+    <a href="#" tabindex="10">Paid Courses</a>
+    <a href="#" tabindex="11">New</a>
+    <br>
+    <button id="okbtn" tabindex="12">Ok</button>
+    <button id="cancelbtn" class="autofocus2" tabindex="13" >Cancel</button>
+<div tabindex="14"  onFocus="document.querySelector('.autofocus1').focus()"></div>
+</body>
+</html>
